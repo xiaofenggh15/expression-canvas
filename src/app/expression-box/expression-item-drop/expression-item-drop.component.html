@@ -1,0 +1,9 @@
+<div class="expression-drop-container" [style.left]="startX"
+[style.top]="startY">
+  <img [src]="expression.imageSource"
+    draggable="true" class="image-responsive" 
+    [width]="expression.width" [height]="expression.height">
+    <app-param-item  *ngFor="let id of paramIds"
+      [paramId]="id"
+      (givenValue)="onGiven($event)"></app-param-item>
+</div>

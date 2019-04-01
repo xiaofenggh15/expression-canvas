@@ -1,0 +1,10 @@
+<div id="expression-box" 
+  (drop)="onDrop($event)" 
+  (dragover)="allowDrop($event)">
+  <div *ngFor="let expressionDrop of expressionDropList">
+      <app-expression-item-drop 
+        [expressionDrop]="expressionDrop" #cmp></app-expression-item-drop>
+ 
+  </div>
+</div>
+
